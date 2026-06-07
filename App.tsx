@@ -66,6 +66,17 @@ const App: React.FC = () => {
     root.style.setProperty('--h3-size', siteConfig.h3Size);
     root.style.setProperty('--text-size', siteConfig.textSize);
     root.style.setProperty('--menu-size', siteConfig.menuSize);
+
+    // Update dynamic favicon dynamically to use flok logo from siteConfig
+    if (siteConfig.logoImage) {
+      let link: HTMLLinkElement | null = document.querySelector("link[rel~='icon']");
+      if (!link) {
+        link = document.createElement('link');
+        link.rel = 'icon';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+      link.href = siteConfig.logoImage;
+    }
   }, [siteConfig]);
 
   const saveToStorage = (key: string, data: any) => {
