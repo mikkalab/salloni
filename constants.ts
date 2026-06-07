@@ -1,5 +1,6 @@
 import { Staff, Service, Product, SiteConfig } from './types';
 
+// FLOK STUDIO Layout & Content Management Config
 export const INITIAL_STAFF: Staff[] = [
   { id: '1', name: 'Xeni', role: 'menaxher', photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800', bio: 'Menaxher i studios.', shift: '09:00 - 17:00', skills: ['Prerje', 'Ngjyrosje'] },
   { id: '2', name: 'Shehrie', role: 'stilist', photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800', bio: 'Stiliste Senior.', shift: '09:00 - 17:00', skills: ['Prerje', 'Ngjyrosje'] },
